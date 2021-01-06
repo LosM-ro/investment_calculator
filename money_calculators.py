@@ -3,7 +3,7 @@ def calc_money():
     user_choice = ""
     
     while user_choice != "q":
-        print("\n[1] Enter 1 to check when you'll retire based on monthly savings.")
+        print("\n[1] Enter 1 to check when you'll retire based on investing monthly savings.")
         print("[2] Enter 2 to see how much money you can earn in ten years by investing a luxury expense (like coffee or eating out).")
         print("[q] Enter q to quit")
 
@@ -33,49 +33,53 @@ def calc_money():
                     print("Please enter a valid whole number")
                 else:
                     break
+            
+            if monthly_spend > monthly_income:
+                print("\nYour spend is greater than your income, you'll never retire at this rate.")
 
-            savings_percent = int(100 - ((monthly_spend / monthly_income) * 100))
+            else:
+                savings_percent = int(100 - ((monthly_spend / monthly_income) * 100))
 
-            if savings_percent <= 5:
-                print("You'll retire in 66 years, you need to start saving more money.")
-            elif 5 < savings_percent <= 10:
-                print("You'll retire in 51 to 66 years, you need to start saving more money.")
-            elif 10 < savings_percent <= 15:
-                print("You'll retire in 43 to 50 years, you need to start saving more money.")
-            elif 15 < savings_percent <= 20:
-                print("You'll retire in 37 to 42 years, you need to start saving more money.")
-            elif 20 < savings_percent <= 25:
-                print("You'll retire in 32 to 36 years, you need to start saving more money.")
-            elif 25 < savings_percent <= 30:
-                print("You'll retire in 28 to 31 years, you need to start saving more money.")
-            elif 30 < savings_percent <= 35:
-                print("You'll retire in 25 to 27 years, not bad, but you can do better.")
-            elif 35 < savings_percent <= 40:
-                print("You'll retire in 22 to 25 years, not bad, but you can do better!")
-            elif 40 < savings_percent <= 45:
-                print("You'll retire in 19 to 21 years, not bad, but you can do better!")
-            elif 45 < savings_percent <= 50:
-                print("You'll retire in 17 to 18 years, not bad, but you can do better!")
-            elif 50 < savings_percent <= 55:
-                print("You'll retire in 14.5 to 16 years, you're doing pretty good! But I think you can do better!")
-            elif 55 < savings_percent <= 60:
-                print("You'll retire in 12.5 to 14.5 years, you're doing pretty good! But I think you can do better!")
-            elif 60 < savings_percent <= 65:
-                print("You'll retire in 10.5 to 12.5 years, you're doing pretty good! But I think you can do better!")
-            elif 65 < savings_percent <= 70:
-                print("You'll retire in 8.5 to 10.5 years, great, you're ahead of most people!")
-            elif 70 < savings_percent <= 75:
-                print("You'll retire in 7 to 8.5 years, great, you're ahead of most people!")
-            elif 75 < savings_percent <= 80:
-                print("You'll retire in 5.5 to 7 years, great, you're ahead of most people!")
-            elif 80 < savings_percent <= 85:
-                print("You'll retire in 4 to 5.5 years, you're killing it!")
-            elif 85 < savings_percent <= 90:
-                print("You'll retire in 3 to 4 years, great work, retirement is right around the corner!")
-            elif 90 < savings_percent <= 95:
-                print("You'll retire in less than 2 to 3 years, great work, retirement is right around the corner!")
-            elif 95 < savings_percent <= 100:
-                print("If you're not already retired, you'll retire any day now! You made it to the end-game, enjoy retirement!")
+                if savings_percent <= 5:
+                    print("\nYou'll retire in 66 years, you need to start saving more money.")
+                elif 5 < savings_percent <= 10:
+                    print("\nYou'll retire in 51 to 66 years, you need to start saving more money.")
+                elif 10 < savings_percent <= 15:
+                    print("\nYou'll retire in 43 to 50 years, you need to start saving more money.")
+                elif 15 < savings_percent <= 20:
+                    print("\nYou'll retire in 37 to 42 years, you need to start saving more money.")
+                elif 20 < savings_percent <= 25:
+                    print("\nYou'll retire in 32 to 36 years, you need to start saving more money.")
+                elif 25 < savings_percent <= 30:
+                    print("\nYou'll retire in 28 to 31 years, you need to start saving more money.")
+                elif 30 < savings_percent <= 35:
+                    print("\nYou'll retire in 25 to 27 years, not bad, but you can do better.")
+                elif 35 < savings_percent <= 40:
+                    print("\nYou'll retire in 22 to 25 years, not bad, but you can do better!")
+                elif 40 < savings_percent <= 45:
+                    print("\nYou'll retire in 19 to 21 years, not bad, but you can do better!")
+                elif 45 < savings_percent <= 50:
+                    print("\nYou'll retire in 17 to 18 years, not bad, but you can do better!")
+                elif 50 < savings_percent <= 55:
+                    print("\nYou'll retire in 14.5 to 16 years, you're doing pretty good! But I think you can do better!")
+                elif 55 < savings_percent <= 60:
+                    print("\nYou'll retire in 12.5 to 14.5 years, you're doing pretty good! But I think you can do better!")
+                elif 60 < savings_percent <= 65:
+                    print("\nYou'll retire in 10.5 to 12.5 years, you're doing pretty good! But I think you can do better!")
+                elif 65 < savings_percent <= 70:
+                    print("\nYou'll retire in 8.5 to 10.5 years, great, you're ahead of most people!")
+                elif 70 < savings_percent <= 75:
+                    print("\nYou'll retire in 7 to 8.5 years, great, you're ahead of most people!")
+                elif 75 < savings_percent <= 80:
+                    print("\nYou'll retire in 5.5 to 7 years, great, you're ahead of most people!")
+                elif 80 < savings_percent <= 85:
+                    print("\nYou'll retire in 4 to 5.5 years, you're killing it!")
+                elif 85 < savings_percent <= 90:
+                    print("\nYou'll retire in 3 to 4 years, great work, retirement is right around the corner!")
+                elif 90 < savings_percent <= 95:
+                    print("\nYou'll retire in less than 2 to 3 years, great work, retirement is right around the corner!")
+                elif 95 < savings_percent <= 100:
+                    print("\nIf you're not already retired, you'll retire any day now! You made it to the end-game, enjoy retirement!")
 
         elif user_choice == "2":
             print("\n[1] Enter 1 for a weekly expense.")
@@ -84,12 +88,13 @@ def calc_money():
             user_selection = input("\nWould you like to calculate a monthly or weekly expense? ")
 
             if user_selection == "1":
-                while True:              
+                while True:      
                     try:
                         weekly_expense = int(input("What is your weekly expense (whole numbers only)? "))
-                        break
                     except:
                         print("Please enter a valid whole number")
+                    else:
+                        break
                 
                 investment_total = weekly_expense * 752
 
@@ -99,9 +104,10 @@ def calc_money():
                 while True:              
                     try:
                         monthly_expense = int(input("What is your monthly expense (whole numbers only)? "))
-                        break
                     except:
                         print("Please enter a valid whole number")
+                    else:
+                        break
                 
                 investment_total2 = monthly_expense * 173
 
